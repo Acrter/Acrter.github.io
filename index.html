@@ -177,6 +177,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/23/blog2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tou.jpg">
+      <meta itemprop="name" content="Acrter">
+      <meta itemprop="description" content="向钱看之余，别忘了保持理性">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Acrter的博客ww">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/23/blog2/" class="post-title-link" itemprop="url">搭建网站我可能踩到的坑(?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-23 18:34:20 / 修改时间：19:39:31" itemprop="dateCreated datePublished" datetime="2021-02-23T18:34:20+08:00">2021-02-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>先来说说hexo从本地到部署的步骤:</p>
+<p>1.hexo clean   #清除缓存稳健db.json和已生成的静态文件public，有一些全局更改的变化时需要用到，但最好是                            网站做出任何变化时都先输入。</p>
+<p>2.hexo g         #生成网站静态文件到默认设置的public文件夹中</p>
+<p>2.5.hexo s      #可选步骤，在本地显示一个你已更改的网站供你预览</p>
+<p>3.hexo d         # 自动生成网站静态文件并部署到仓库中(github</p>
+<h1 id="问题1：我已完成主题next的准备，但hexo-d后，网站没有变化"><a href="#问题1：我已完成主题next的准备，但hexo-d后，网站没有变化" class="headerlink" title="问题1：我已完成主题next的准备，但hexo d后，网站没有变化"></a>问题1：我已完成主题next的准备，但hexo d后，网站没有变化</h1><p>网上给出的答案是：或许有延迟，等10min，或是将next文件夹下的隐藏文件.github删除。</p>
+<p>是的，我删了.github文件，并改了下仓库中的main–&gt;master。网站有反应，但实际上不需要删.github，或许只是main或master没有设置对，因此引起了问题2.</p>
+<h1 id="问题2：想发新blog-当我在git-bash一切正常的情况下，hexo-clean-hexo-g后，hexo-s在本地都没显示网站有任何新blog"><a href="#问题2：想发新blog-当我在git-bash一切正常的情况下，hexo-clean-hexo-g后，hexo-s在本地都没显示网站有任何新blog" class="headerlink" title="问题2：想发新blog:当我在git bash一切正常的情况下，hexo clean + hexo g后，hexo s在本地都没显示网站有任何新blog"></a>问题2：想发新blog:当我在git bash一切正常的情况下，hexo clean + hexo g后，hexo s在本地都没显示网站有任何新blog</h1><p>主题却是可变的，但就是发不出新文章，耗时2小时解决：将.github复制回next文件夹，结束。成功发文。</p>
+<p>我甚至一度以为是在编辑新文件时有什么语法错误，或是插入图片产生问题导致无法网站无法正常显示文章，但实际上我连文章都没部署到github仓库，更别说显示了。</p>
+<h2 id="希望能帮到你ww"><a href="#希望能帮到你ww" class="headerlink" title="希望能帮到你ww"></a>希望能帮到你ww</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/23/blog1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,14 +498,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
